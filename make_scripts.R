@@ -6,6 +6,8 @@ getwd() # Check updated working directory
 
 
 factors <- seq(0, 20, by = 0.5)
+factors <- c(factors, 100)
+
 
 template <- readLines("main_template.R")
 

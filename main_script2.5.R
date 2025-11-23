@@ -22,7 +22,7 @@ for(qq in the_ratio){
   
   for (i in 1:100) {
     
-    obs_gen_para <- read.csv(paste0("pattern/CSR", qq, "/obs_info_all_", qq, "_", i, ".csv"))
+    obs_gen_para <- read.csv(paste0("pattern/ST", qq, "/obs_info_all_", qq, "_", i, ".csv"))
     
     result <- DT_fixed_Alg(obs_gen_para, 2.5)
     
@@ -44,7 +44,7 @@ for(qq in the_ratio){
   
   header <- '"length" "cost" "number_of_disambiguations"'
   
-  txt_path <- file.path(output_dir, paste0("results_DT2.5_CSR_", qq, ".txt"))
+  txt_path <- file.path(output_dir, paste0("results_DT2.5_ST_", qq, ".txt"))
   
   writeLines(header, txt_path)
   
@@ -58,7 +58,7 @@ for(qq in the_ratio){
     sep = " "
   )
   
-  file_name <- file.path(output_dir, paste0("results_DT2.5_CSR_", qq, ".rds"))
+  file_name <- file.path(output_dir, paste0("results_DT2.5_ST_", qq, ".rds"))
   saveRDS(results[, "Path"], file = file_name)
   
   
