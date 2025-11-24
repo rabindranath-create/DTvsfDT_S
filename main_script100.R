@@ -24,7 +24,7 @@ for(qq in the_ratio){
     
     obs_gen_para <- read.csv(paste0("pattern/ST", qq, "/obs_info_all_", qq, "_", i, ".csv"))
     
-    result <- DT_fixed_Alg(obs_gen_para, 100)
+    result <- DT_Alg(obs_gen_para)
     
     results_DT[i, ] <- list(
       Run = i,
